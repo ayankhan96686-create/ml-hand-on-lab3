@@ -52,18 +52,20 @@ Generated plots are stored in the `visualizations/` folder:
 ### Repository Structure
 ```
 .
-├── Hands_on_Lab_Evaluation_3_Classification.ipynb  # Executed Jupyter Notebook
-├── classification_models_evaluation.py             # Complete Python script
-├── cleaned_breast_cancer.csv                       # Cleaned dataset (ready to use)
-├── CLASSIFICATION_MODEL_COMPARISON_REPORT.md       # Comprehensive evaluation report
-├── visualizations/                                 # Generated evaluation charts
-│   ├── 01_feature_distributions_histograms.png
-│   ├── 02_feature_distributions_boxplots.png
-│   ├── 03_correlation_heatmap.png
-│   ├── 04_decision_tree_structure.png
-│   ├── 05_confusion_matrices.png
-│   ├── 06_roc_curves.png
-│   └── 07_models_performance_comparison.png
+├── Submission/                                     # All Submission Deliverables
+│   ├── Hands_on_Lab_Evaluation_3_Classification.ipynb  # Executed Jupyter Notebook
+│   ├── classification_models_evaluation.py         # Complete Python script
+│   ├── cleaned_breast_cancer.csv                   # Cleaned dataset (ready to use)
+│   ├── CLASSIFICATION_MODEL_COMPARISON_REPORT.md   # Comprehensive evaluation report
+│   ├── model_evaluation_metrics_summary.txt        # Text summary of metrics & conclusion
+│   └── visualizations/                             # Generated evaluation charts
+│       ├── 01_feature_distributions_histograms.png
+│       ├── 02_feature_distributions_boxplots.png
+│       ├── 03_correlation_heatmap.png
+│       ├── 04_decision_tree_structure.png
+│       ├── 05_confusion_matrices.png
+│       ├── 06_roc_curves.png
+│       └── 07_models_performance_comparison.png
 ├── archive/
 │   └── data.csv                                    # Original raw dataset
 └── README.md
@@ -80,10 +82,11 @@ Generated plots are stored in the `visualizations/` folder:
 
 2. **Run Python script:**
    ```bash
+   cd Submission
    python classification_models_evaluation.py
    ```
 
 3. **Open Jupyter Notebook:**
    ```bash
-   jupyter notebook Hands_on_Lab_Evaluation_3_Classification.ipynb
+   jupyter notebook Submission/Hands_on_Lab_Evaluation_3_Classification.ipynb
    ```

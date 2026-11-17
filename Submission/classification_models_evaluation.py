@@ -41,8 +41,9 @@ try:
     df = pd.read_csv(github_url)
     print("Dataset loaded successfully from GitHub!")
 except Exception:
-    df = pd.read_csv("archive/data.csv")
-    print("Loaded from local file.")
+    local_path = "../archive/data.csv" if os.path.exists("../archive/data.csv") else "archive/data.csv"
+    df = pd.read_csv(local_path)
+    print(f"Loaded from local file: {local_path}")
 print(f"Dataset Loaded. Total Rows: {df.shape[0]}, Columns: {df.shape[1]}")
 
 # 1. Display first 10 records
