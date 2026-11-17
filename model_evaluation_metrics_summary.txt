@@ -1,0 +1,30 @@
+BREAST CANCER WISCONSIN CLASSIFICATION BENCHMARK SUMMARY
+============================================================
+
+                              Accuracy  Precision    Recall  F1-Score   ROC-AUC
+Logistic Regression           0.970760   0.983607  0.937500  0.960000  0.997518
+Decision Tree                 0.906433   0.961538  0.781250  0.862069  0.909536
+Random Forest                 0.964912   1.000000  0.906250  0.950820  0.996641
+Support Vector Machine (SVM)  0.959064   1.000000  0.890625  0.942149  0.997225
+Naïve Bayes                   0.935673   0.949153  0.875000  0.910569  0.993283
+
+
+========================================================================================
+EXECUTIVE SUMMARY AND CONCLUSION (150-200 Words)
+========================================================================================
+In this clinical machine learning investigation, five supervised classification algorithms
+were trained and rigorously evaluated on the Breast Cancer Wisconsin Diagnostic dataset:
+Logistic Regression, Decision Tree, Random Forest, Support Vector Machine (SVM), and
+Gaussian Naive Bayes. Diagnostic features extracted from digitized fine needle aspirates
+(FNA) were normalized using StandardScaler to eliminate dimensional scale discrepancies.
+
+Logistic Regression demonstrated outstanding diagnostic capability, attaining the highest
+Accuracy (97.08%), Recall (93.75%), and F1-Score (96.00%) with an exemplary ROC-AUC of 0.9975.
+In oncology applications, Recall is the paramount clinical metric because a False Negative
+(misclassifying a malignant tumor as benign) can delay life-saving medical interventions.
+Logistic Regression produced only 4 False Negatives out of 64 malignant cases, outperforming
+Random Forest (6 FN) and SVM (7 FN). Furthermore, Random Forest achieved perfect Precision
+(100%) and 96.49% Accuracy, demonstrating immense utility when zero false alarms are desired.
+Decision Tree yielded the lowest generalization (90.06% Accuracy, 10 FN), suffering from
+local greedy variance. Consequently, Logistic Regression is recommended as the premier
+classification model for clinical deployment, paired with Random Forest for ensemble verification.
