@@ -35,9 +35,14 @@ print("=" * 60)
 print("TASK 1: Loading and Exploring Dataset")
 print("=" * 60)
 
-# Load CSV data
-data_path = "archive/data.csv" if os.path.exists("archive/data.csv") else "data.csv"
-df = pd.read_csv(data_path)
+# Load dataset directly from GitHub repository
+github_url = "https://raw.githubusercontent.com/ayankhan96686-create/ml-hand-on-lab3/main/archive/data.csv"
+try:
+    df = pd.read_csv(github_url)
+    print("Dataset loaded successfully from GitHub!")
+except Exception:
+    df = pd.read_csv("archive/data.csv")
+    print("Loaded from local file.")
 print(f"Dataset Loaded. Total Rows: {df.shape[0]}, Columns: {df.shape[1]}")
 
 # 1. Display first 10 records
